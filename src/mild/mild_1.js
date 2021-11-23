@@ -86,16 +86,16 @@ export function countArray(array) {
             }
         }
     }
-    // count instances and print
+    // count instances and print the number of occurrences
     var count = 1;
     let result = "{"
     for (var i = 0; i < array.length; i++) {
-        if (((i + 1) - count) != 0) {
-            result = result + ",";
-        }
         if (array[i] == array[i + 1]) {
             count++;
         } else {
+            if (((i + 1) - count) != 0) {
+                result = result + ",";
+            }
             result += " '" + array[i].toString() + "':" + count.toString();
             count = 1;
         }
