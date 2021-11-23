@@ -78,18 +78,18 @@ export function getStatistics(array) {
             }
         }
     }
-    let result = "{ \nlength: " + array.length + ",\n";
+    let result = "{ \n  length: " + array.length + ",\n";
 
     // find the sums
     let sum = array[0];
     for (let i = 1; i < array.length; i++) {
         sum += array[i];
     }
-    result = result + "sum: " + sum + ",\n";
+    result = result + "  sum: " + sum + ",\n";
 
     // find the mean
     let mean = sum/array.length;
-    result = result + "mean: " + mean + ",\n";
+    result = result + "  mean: " + mean + ",\n";
 
     // find the median
     let median = 0;
@@ -101,11 +101,11 @@ export function getStatistics(array) {
         let middle = (array.length + 1)/2;
         median = array[middle];
     }
-    result = result + "median: " + median + ",\n";
+    result = result + "  median: " + median + ",\n";
 
     // add min and max to result
-    result = result + "min: " + array[0] + ",\n";
-    result = result + "max: " + array[array.length - 1] + ",\n";
+    result = result + "  min: " + array[0] + ",\n";
+    result = result + "  max: " + array[array.length - 1] + ",\n";
 
     // find the variance
     let variance = 0;
@@ -115,11 +115,11 @@ export function getStatistics(array) {
         variance = variance + diff;
     }
     variance = variance / array.length;
-    result = result + "variance: " + variance + ",\n";
+    result = result + "  variance: " + variance + ",\n";
 
     // find the standard deviation
     let stddev = Math.sqrt(variance);
-    result = result + "standard_deviation: " + stddev + ",\n}";
+    result = result + "  standard_deviation: " + stddev + "\n}";
 
     return result;
 }
