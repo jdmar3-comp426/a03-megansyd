@@ -96,7 +96,7 @@ export function countArray(array) {
             if (((i + 1) - count) != 0) {
                 result = result + ",";
             }
-            result += " '" + array[i].toString() + "':" + count.toString();
+            result += " '" + array[i].toString() + "': " + count.toString();
             count = 1;
         }
     }
