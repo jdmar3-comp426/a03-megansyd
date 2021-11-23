@@ -18,6 +18,8 @@ export const repeat = (fn, n, ...params) => {
     let final = "\n";
     for (let i = 1; i <=n; i++) {
         final = final + fn(params);
+        final.replace("[ '", "");
+        final.replace("' ]", "");
     }
     final = final + "\n";
     return final;
