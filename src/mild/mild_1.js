@@ -32,7 +32,10 @@ export function getIncreasingArray(startNumber, endNumber) {
             result += "\n";
         }
         let current = startNumber + i;
-        result = result + ", " + current.toString();
+        result = result + current.toString();
+        if (current != endNumber) {
+            result = result + ", ";
+        }
     }
     result = result + "\n ]"
     return result;
