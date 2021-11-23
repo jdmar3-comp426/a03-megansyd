@@ -31,6 +31,9 @@ export function getIncreasingArray(startNumber, endNumber) {
         if ( ((i % 5) == 0) ){
             result += "\n";
         }
+        if ( ((i % 5) == 0) && (i != (diff - 1))) {
+            result += " ";
+        }
         let current = startNumber + i;
         result = result + " " + current.toString();
         if (current != endNumber) {
