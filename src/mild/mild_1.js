@@ -26,7 +26,7 @@ export function sumToString(a, b) {
  */
 export function getIncreasingArray(startNumber, endNumber) {
     let diff = endNumber - startNumber;
-    let result = "[\n " + startNumber.toString() + ", ";
+    let result = "[\n  " + startNumber.toString() + ",";
     for (var i = 1; i <= diff; i++) {
         if ( ((i % 5) == 0) ){
             result += "\n";
@@ -37,7 +37,7 @@ export function getIncreasingArray(startNumber, endNumber) {
             result = result + ",";
         }
     }
-    result = result + "\n ]"
+    result = result + "\n]"
     return result;
 }
 
