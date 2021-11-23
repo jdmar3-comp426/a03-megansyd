@@ -26,12 +26,15 @@ export function sumToString(a, b) {
  */
 export function getIncreasingArray(startNumber, endNumber) {
     let diff = endNumber - startNumber;
-    let result = "[ " + startNumber.toString();
+    let result = "[ \n" + startNumber.toString();
     for (var i = 1; i <= diff; i++) {
         let current = startNumber + i;
         result = result + ", " + current.toString();
+        if ( ((i + 1) % 5) == 0) {
+            result += "\n";
+        }
     }
-    result = result + " ]"
+    result = result + "\n ]"
     return result;
 }
 
