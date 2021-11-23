@@ -76,5 +76,27 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    // sort the array
+    for (var i = 0; i < array.length; i++) {
+        for (var j = i + 1; j < array.length; j++) {
+            if (array[i] > array[j]) {
+                tmp = array[i]
+                array[i] = array[j];
+                array[j] = tmp;
+            }
+        }
+    }
+    // count instances and print
+    var count = 1;
+    let result = "{"
+    for (var i = 0; i < array.length; i++) {
+        if (i != 0) {
+            result = result + ",";
+        }
+        if (array[i] == array[i + 1]) {
+            count++;
+        } else {
+            result += " '" + array[i].toString() + "':" + count.toString();
+        }
+    }
 }
