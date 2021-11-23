@@ -15,13 +15,13 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-    let final = "\n";
-    for (let i = 1; i <=n; i++) {
-        final = final + fn(params);
-        final.replace("[ '", "");
-        final.replace("' ]", "");
+    let array = new Array(n);
+    for (let i = 0; i < n; i++) {
+        array[i] = fn(params);
     }
-    final = final + "\n";
+    let final = array.toString();
+    final.replace("[ '", "");
+    final.replace("' ]", "");
     return final;
 };
 
