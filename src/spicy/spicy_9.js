@@ -20,8 +20,9 @@ export const repeat = (fn, n, ...params) => {
         array[i] = fn(params);
     }
     let final = array.toString();
-    final.replace("[ '", "");
-    final.replace("' ]", "");
+    final.replace("[", "");
+    final.replace("]", "");
+    final.replace(",");
     return final;
 };
 
