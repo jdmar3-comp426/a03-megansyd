@@ -27,6 +27,7 @@ export function getSum(array) {
  */
 export function getMedian(array) {
     // sort the array
+    let median = 0;
     for (var i = 0; i < array.length; i++) {
         for (var j = i + 1; j < array.length; j++) {
             if (array[i] > array[j]) {
@@ -39,12 +40,12 @@ export function getMedian(array) {
     if ((array.length % 2) == 0) {
         let lower = array.length/2;
         let upper = lower + 1;
-        let median = ((array[lower] + array[upper]) / 2);
+        median = ((array[lower] + array[upper]) / 2);
     } else {
         let middle = (array.length + 1)/2;
-        let median = array[middle];
+        median = array[middle];
     }
-    return middle;
+    return median;
 }
 
 /**
