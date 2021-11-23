@@ -78,7 +78,7 @@ export function getStatistics(array) {
             }
         }
     }
-    let result = "{ \n  length: " + array.length + ",\n";
+    let result = "{\n  length: " + array.length + ",\n";
 
     // find the sums
     let sum = array[0];
@@ -119,7 +119,7 @@ export function getStatistics(array) {
 
     // find the standard deviation
     let stddev = Math.sqrt(variance);
-    result = result + "  standard_deviation: " + stddev + "\n}";
+    result = result + "  standard_deviation: " + stddev + "\n}\n";
 
     return result;
 }
