@@ -15,13 +15,9 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-    let result = new Array(n);
-    for (let i = 1; i <=n; i++) {
-        result[i-1] = fn(params);
-    }
     let final = "\n";
-    for (let j = 0; j < result.length; j++) {
-        final += result[j];
+    for (let i = 1; i <=n; i++) {
+        final = final + fn(params);
     }
     final = final + "\n";
     return final;
