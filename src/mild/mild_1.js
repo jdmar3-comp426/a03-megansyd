@@ -90,14 +90,16 @@ export function countArray(array) {
     var count = 1;
     let result = "{"
     for (var i = 0; i < array.length; i++) {
-        if (i != 0) {
+        if (((i + 1) - count) != 0) {
             result = result + ",";
         }
         if (array[i] == array[i + 1]) {
             count++;
         } else {
             result += " '" + array[i].toString() + "':" + count.toString();
+            count = 1;
         }
     }
+    result = result + " }";
     return result;
 }
