@@ -34,7 +34,7 @@ export const repeat = (fn, n, ...params) => {
 export const repeatDemo = () => {
     let single = "Hello, world!";
     let helloFinal = single.repeat(10);
-    return helloFinal;
+    console.log(helloFinal);
 };
 
 
