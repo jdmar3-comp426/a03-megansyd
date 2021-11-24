@@ -32,7 +32,9 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-
+    let single = "Hello, world!";
+    let helloFinal = single.repeat(10);
+    return helloFinal;
 };
 
 
