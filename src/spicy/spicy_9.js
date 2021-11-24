@@ -18,12 +18,13 @@ export const repeat = (fn, n, ...params) => {
     let array = new Array(n);
     for (let i = 0; i < n; i++) {
         array[i] = fn(params);
+        return array[i];
     }
-    let final = array.toString();
-    final.replace("[", "");
-    final.replace("]", "");
-    final.replace(",", "");
-    return final;
+    // let final = array.toString();
+    // final.replace("[", "");
+    // final.replace("]", "");
+    // final.replace(",", "");
+    // return final;
 };
 
 
