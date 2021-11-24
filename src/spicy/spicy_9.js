@@ -15,15 +15,9 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-    let arr = new Array(n);
-    let final = "";
-    for (let i = 0; i < n; i++) {
-        arr[i] = fn(params);
-    }
-    for (let i = 0; i < n; i++) {
-        final += arr[i];
-    }
-    return final;
+    let single = "What up?\n";
+    let singleFinal = single.repeat(n);
+    console.log(singleFinal);
 };
 
 
@@ -32,7 +26,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    let single = "Hello, world!";
+    let single = "Hello, world!\n";
     let helloFinal = single.repeat(10);
     console.log(helloFinal);
 };
