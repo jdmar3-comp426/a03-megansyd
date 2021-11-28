@@ -35,6 +35,7 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
             }
         }
     }
+    return theNew;
 }
 
 
