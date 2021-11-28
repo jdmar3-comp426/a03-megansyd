@@ -185,11 +185,7 @@ export const filter = (arr, test) => {
  */
 export const allEvensAreOdd = (arr) => {
     function test(value) {
-        if((value % 2) == 0) {
-            return false;
-        } else {
-            return true;
-        }
+        (value % 2) != 0;
     }
     return everyEven(arr, test);
 };
