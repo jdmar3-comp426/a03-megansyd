@@ -18,6 +18,25 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
+    function creatingNew (array) {
+        for (let i = 0; i < array.length; i++) {
+            if((array[i].horsepower >= minHorsepower) && (array[i].torque >= minTorque)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    let theNew = car_data.filter(creatingNew);
+    for (var i = 0; i < theNew.length; i++) {
+        for (var j = i + 1; j < theNew.length; j++) {
+            if (theNew[i].horsepower < theNew[j].horsepower) {
+                let tmp = theNew[i];
+                theNew[i] = theNew[j];
+                theNew[j] = tmp;
+            }
+        }
+    }
 
 }
 
