@@ -98,7 +98,7 @@ export const everyEven = (arr, test) => {
         evenNumbers.push(arr[i]);
     }
     for (let i = 0; i < evenNumbers.length; i++) {
-        bool = test(evenNumbers[i]);
+        let bool = test(evenNumbers[i]);
         if (bool == false) {
             return false;
         }
@@ -132,7 +132,7 @@ export const someEven = (arr, test) => {
         evenNumbers.push(arr[i]);
     }
     for (let i = 0; i < evenNumbers.length; i++) {
-        bool = test(evenNumbers[i]);
+        let bool = test(evenNumbers[i]);
         if (bool == true) {
             return true;
         }
