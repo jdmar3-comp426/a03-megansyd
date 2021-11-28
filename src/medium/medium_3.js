@@ -93,5 +93,24 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    function creatingNew(value) {
+        for (let i = 0; i < years.length; i++) {
+            if((value.year) == years[i]) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    let theNew = car_data.filter(creatingNew);
+    for (var i = 0; i < theNew.length; i++) {
+        for (var j = i + 1; j < theNew.length; j++) {
+            if (theNew[i].year < theNew[j].year) {
+                let tmp = theNew[i];
+                theNew[i] = theNew[j];
+                theNew[j] = tmp;
+            }
+        }
+    }
+    return theNew;
 }
