@@ -45,10 +45,11 @@ export const repeatDemo = () => {
  *   product of num1 and num2.
  */
 export const multiplyBy = (num1) => {
-    function innerfunction(num1, num2){
+    function innerfunction(a, b){
         return num1 * num2;
     }
-    let num2 = 4;
+    let first = num1;
+    let second = 5;
     return innerfunction(num1, num2); 
 };
 
