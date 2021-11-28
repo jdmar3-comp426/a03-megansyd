@@ -20,6 +20,7 @@ export const repeat = (fn, n, ...params) => {
     //     arr[i] = fn(params);
     // }
     // console.log(arr);
+    console.log(fn(params).value);
     let single = "What up?\n";
     let singleFinal = single.repeat(n);
     console.log(singleFinal);
