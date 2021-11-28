@@ -197,7 +197,7 @@ export const hasExactly = (arr, test, n) => {
     }
     arr.filter(isTrue);
     let count = arr.length;
-    if (count == n) {
+    if (count >= n) {
         return true;
     } else {
         return false; 
