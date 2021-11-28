@@ -126,10 +126,10 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-    function isEven(value) {
-        return (value % 2 == 0);
+    let evenNumbers = []; 
+    for (let i = 0; i < arr.length; i+=2) {
+        evenNumbers.push(arr[i]);
     }
-    const evenNumbers = arr.filter(isEven);
     for (let i = 0; i < evenNumbers.length; i++) {
         if (test(evenNumbers[i] == true)) {
             return true;
