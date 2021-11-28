@@ -195,9 +195,10 @@ export const hasExactly = (arr, test, n) => {
     function isTrue(value) {
         return(test(value) == true);
     }
-    arr.filter(isTrue);
-    let count = arr.length;
-    if (count >= n) {
+
+    const filtered = arr.filter(isTrue);
+    let count = filtered.length;
+    if (count == n) {
         return true;
     } else {
         return false; 
