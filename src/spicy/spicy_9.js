@@ -93,7 +93,7 @@ export const tenTimesFifty = (num) => {
  *    everyEven([1, 1, 0, 1, 1], x => x === 1)  <--  returns false
  */
 export const everyEven = (arr, test) => {
-    let evenNumbers; 
+    let evenNumbers = []; 
     for (let i = 0; i < arr.length; i+=2) {
         evenNumbers.push(arr[i]);
     }
