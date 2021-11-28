@@ -24,7 +24,6 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
         } else {
             return false;
         }
-        }
     }
     let theNew = car_data.filter(creatingNew);
     for (var i = 0; i < theNew.length; i++) {
@@ -36,6 +35,7 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
             }
         }
     }
+}
 
 
 /**
