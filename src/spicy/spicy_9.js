@@ -17,7 +17,7 @@
 export const repeat = (fn, n, ...params) => {
     let arr;
     for(let i = 0; i < n; i++) {
-        arr.push(fn(params));
+        arr[i] = fn(params);
     }
     console.log(arr);
     // let single = "What up?\n";
