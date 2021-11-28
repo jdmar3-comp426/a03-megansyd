@@ -199,13 +199,10 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-    const filtered = someEven(arr);
-    for (let i = 0; i < filtered.length; i++) {
-        if ((arr[i] % 2) == 1) {
-            return true;
-        }
+    function testAll(value) {
+        (value % 2) != 0;
     }
-    return false;
+    return someEven(arr, testAll);
 };
 
 
