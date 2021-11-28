@@ -46,7 +46,7 @@ export const repeatDemo = () => {
  */
 export const multiplyBy = (num1) => {
     function innerfunction(num1, num2){
-        return first * second;
+        return num1 * num2;
     }
     let num2 = 4;
     return innerfunction(num1, num2); 
