@@ -48,7 +48,8 @@ export const multiplyBy = (num1) => {
     const innerfunction = (num2) => {
         num1 * num2;
     }
-    return innerfunction(num2);
+    let a = 5;
+    return innerfunction(a);
 };
 
 
