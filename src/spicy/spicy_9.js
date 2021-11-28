@@ -15,15 +15,14 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-    // let arr = [];
-    // for(let i = 0; i < n; i++) {
-    //     arr[i] = fn(params);
-    // }
+    for(let i = 0; i < n; i++) {
+         console.log(fn(params));
+    }
     // console.log(arr);
-    console.log(fn(params).value);
-    let single = "What up?\n";
-    let singleFinal = single.repeat(n);
-    console.log(singleFinal);
+    //console.log(fn(params));
+    // let single = "What up?\n";
+    // let singleFinal = single.repeat(n);
+    // console.log(singleFinal);
 };
 
 
