@@ -187,7 +187,7 @@ export const filter = (arr, test) => {
  */
 export const allEvensAreOdd = (arr) => {
     function testAll(value) {
-         (value % 2) == 0;
+         (value % 2) == 1;
     }
     return everyEven(arr, testAll);
 };
@@ -200,7 +200,7 @@ export const allEvensAreOdd = (arr) => {
  */
 export const anEvenIsOdd = (arr) => {
     function testAll(value) {
-        (value % 2) == 0;
+        (value % 2) == 1;
     }
     return someEven(arr, testAll);
 };
