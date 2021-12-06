@@ -18,7 +18,24 @@ queries.
  *
  */
 export function searchHighPower(car_data, minHorsepower, minTorque) {
-
+    function creatingNew(value) {
+        if((value.horsepower >= minHorsepower) && (value.torque >= minTorque)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let theNew = car_data.filter(creatingNew);
+    for (var i = 0; i < theNew.length; i++) {
+        for (var j = i + 1; j < theNew.length; j++) {
+            if (theNew[i].horsepower < theNew[j].horsepower) {
+                let tmp = theNew[i];
+                theNew[i] = theNew[j];
+                theNew[j] = tmp;
+            }
+        }
+    }
+    return theNew;
 }
 
 
@@ -33,7 +50,24 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
-
+    function creatingNew(value) {
+        if((value.highway_mpg >= minHighway) && (value.city_mpg >= minCity)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let theNew = car_data.filter(creatingNew);
+    for (var i = 0; i < theNew.length; i++) {
+        for (var j = i + 1; j < theNew.length; j++) {
+            if (theNew[i].highway_mpg < theNew[j].highway_mpg) {
+                let tmp = theNew[i];
+                theNew[i] = theNew[j];
+                theNew[j] = tmp;
+            }
+        }
+    }
+    return theNew;
 }
 
 
@@ -59,5 +93,24 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
-
+    function creatingNew(value) {
+        for (let i = 0; i < years.length; i++) {
+            if((value.year) == years[i]) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+    let theNew = car_data.filter(creatingNew);
+    for (var i = 0; i < theNew.length; i++) {
+        for (var j = i + 1; j < theNew.length; j++) {
+            if (theNew[i].year < theNew[j].year) {
+                let tmp = theNew[i];
+                theNew[i] = theNew[j];
+                theNew[j] = tmp;
+            }
+        }
+    }
+    return theNew;
 }

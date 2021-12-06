@@ -9,7 +9,8 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
-
+    let c = a + b;
+    return a.toString() + " + " + b.toString() + " = " + c.toString();
 }
 
 
@@ -24,7 +25,23 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+    let diff = endNumber - startNumber;
+    let result = "[\n  " + startNumber.toString() + ",";
+    for (var i = 1; i <= diff; i++) {
+        if ( ((i % 5) == 0) ){
+            result += "\n";
+        }
+        if ( ((i % 5) == 0) && (i != (diff - 1))) {
+            result += " ";
+        }
+        let current = startNumber + i;
+        result = result + " " + current.toString();
+        if (current != endNumber) {
+            result = result + ",";
+        }
+    }
+    result = result + "\n]"
+    return result;
 }
 
 /**
@@ -35,7 +52,17 @@ export function getIncreasingArray(startNumber, endNumber) {
  * and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
  */
 export function maxAndMin(numbers) {
-
+    let min = numbers[0];
+    let max = numbers[0];
+    for (var i = 0; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    return "{ max: " + max + ", " + "min: " + min + " }";
 }
 
 /**
@@ -49,5 +76,30 @@ export function maxAndMin(numbers) {
  *
  */
 export function countArray(array) {
-
+    // sort the array
+    for (var i = 0; i < array.length; i++) {
+        for (var j = i + 1; j < array.length; j++) {
+            if (array[i] > array[j]) {
+                let tmp = array[i];
+                array[i] = array[j];
+                array[j] = tmp;
+            }
+        }
+    }
+    // count instances and print the number of occurrences
+    var count = 1;
+    let result = "{"
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] == array[i + 1]) {
+            count++;
+        } else {
+            if (((i + 1) - count) != 0) {
+                result = result + ",";
+            }
+            result += " '" + array[i].toString() + "': " + count.toString();
+            count = 1;
+        }
+    }
+    result = result + " }";
+    return result;
 }
